@@ -1,0 +1,12 @@
+C:\Users\andy-\Desktop\Programming Assignment\Modnote\Modnote\bin\Debug\Modnote.exe.config
+C:\Users\andy-\Desktop\Programming Assignment\Modnote\Modnote\bin\Debug\Modnote.exe
+C:\Users\andy-\Desktop\Programming Assignment\Modnote\Modnote\bin\Debug\Modnote.pdb
+C:\Users\andy-\Desktop\Programming Assignment\Modnote\Modnote\obj\Debug\Modnote.csprojResolveAssemblyReference.cache
+C:\Users\andy-\Desktop\Programming Assignment\Modnote\Modnote\obj\Debug\Modnote.Properties.Resources.resources
+C:\Users\andy-\Desktop\Programming Assignment\Modnote\Modnote\obj\Debug\Modnote.csproj.GenerateResource.Cache
+C:\Users\andy-\Desktop\Programming Assignment\Modnote\Modnote\obj\Debug\Modnote.exe
+C:\Users\andy-\Desktop\Programming Assignment\Modnote\Modnote\obj\Debug\Modnote.pdb
+C:\Users\andy-\Desktop\Programming Assignment\Modnote\Modnote\obj\Debug\Modnote.Modnote.resources
+C:\Users\andy-\Desktop\Programming Assignment\Modnote\Modnote\obj\Debug\Modnote.Credits.resources
+C:\Users\andy-\Desktop\Programming Assignment\Modnote\Modnote\obj\Debug\Modnote.NoteViewer.resources
+C:\Users\andy-\Desktop\Programming Assignment\Modnote\Modnote\obj\Debug\Modnote.Create.resources

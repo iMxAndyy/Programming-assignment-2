@@ -36,6 +36,8 @@
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.creditsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addModButton = new System.Windows.Forms.Button();
+            this.delModButton = new System.Windows.Forms.Button();
             this.infoGroupBox.SuspendLayout();
             this.modGroupBox.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -54,7 +56,7 @@
             "CMP1129M"});
             this.modList.Location = new System.Drawing.Point(12, 19);
             this.modList.Name = "modList";
-            this.modList.Size = new System.Drawing.Size(237, 329);
+            this.modList.Size = new System.Drawing.Size(237, 290);
             this.modList.TabIndex = 0;
             this.modList.SelectedIndexChanged += new System.EventHandler(this.modList_SelectedIndexChanged);
             this.modList.DoubleClick += new System.EventHandler(this.modList_Click);
@@ -79,6 +81,8 @@
             // 
             // modGroupBox
             // 
+            this.modGroupBox.Controls.Add(this.delModButton);
+            this.modGroupBox.Controls.Add(this.addModButton);
             this.modGroupBox.Controls.Add(this.modList);
             this.modGroupBox.Location = new System.Drawing.Point(11, 28);
             this.modGroupBox.Name = "modGroupBox";
@@ -120,6 +124,26 @@
             this.creditsToolStripMenuItem.Text = "Credits";
             this.creditsToolStripMenuItem.Click += new System.EventHandler(this.creditsToolStripMenuItem_Click);
             // 
+            // addModButton
+            // 
+            this.addModButton.Location = new System.Drawing.Point(24, 328);
+            this.addModButton.Name = "addModButton";
+            this.addModButton.Size = new System.Drawing.Size(82, 23);
+            this.addModButton.TabIndex = 1;
+            this.addModButton.Text = "Add Module";
+            this.addModButton.UseVisualStyleBackColor = true;
+            this.addModButton.Click += new System.EventHandler(this.addModButton_Click);
+            // 
+            // delModButton
+            // 
+            this.delModButton.Location = new System.Drawing.Point(146, 328);
+            this.delModButton.Name = "delModButton";
+            this.delModButton.Size = new System.Drawing.Size(87, 23);
+            this.delModButton.TabIndex = 2;
+            this.delModButton.Text = "Delete Module";
+            this.delModButton.UseVisualStyleBackColor = true;
+            this.delModButton.Click += new System.EventHandler(this.delModButton_Click);
+            // 
             // Modnote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -150,6 +174,8 @@
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem creditsToolStripMenuItem;
+        private System.Windows.Forms.Button delModButton;
+        private System.Windows.Forms.Button addModButton;
     }
 }
 

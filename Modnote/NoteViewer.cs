@@ -46,9 +46,10 @@ namespace Modnote
             else
             {
                 SaveFileDialog file = new SaveFileDialog();
-                file.Title = "Save";
+                file.FileName = nameLabel.Text;
+                file.Title = "Save Note";
                 file.Filter = "TXT files|*.txt";
-                file.InitialDirectory = @"";
+                file.InitialDirectory = "/notes";
 
                 if (file.ShowDialog() == DialogResult.OK)
                 {
@@ -80,7 +81,7 @@ namespace Modnote
             OpenFileDialog file = new OpenFileDialog();
             file.Title = "Open";
             file.Filter = "TXT files|*.txt";
-            file.InitialDirectory = @"C:\";
+            file.InitialDirectory = "/notes";
 
             if (file.ShowDialog() == DialogResult.OK)
             {

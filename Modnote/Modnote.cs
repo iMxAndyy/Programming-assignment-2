@@ -72,5 +72,15 @@ namespace Modnote
             Credits creditForm = new Credits();
             creditForm.ShowDialog();
         }
+
+        private void addModButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void delModButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

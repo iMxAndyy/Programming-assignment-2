@@ -41,14 +41,6 @@ namespace Modnote
             }
             
         }
-        private void modList_Click(object sender, EventArgs e)
-        {
-            string selected = modList.GetItemText(modList.SelectedItem);
-            string title = "No Note Loaded";
-            NoteViewer notesForm = new NoteViewer(title, selected);
-            notesForm.ShowDialog();
-            this.DialogResult = DialogResult.Cancel;
-        }
 
         private void closeToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -104,6 +96,19 @@ namespace Modnote
                     modList.Items.Add(array2[i]);
                 }
             }         
+        }
+
+        private void OpenModulebutton_Click(object sender, EventArgs e)
+        {
+            if (modList.GetItemText(modList.SelectedItem) != "")
+            {
+                string selected = modList.GetItemText(modList.SelectedItem);
+                string title = "No Note Loaded";
+                NoteViewer notesForm = new NoteViewer(title, selected);
+                notesForm.ShowDialog();
+                this.DialogResult = DialogResult.Cancel;
+            }
+            
         }
     }
 }

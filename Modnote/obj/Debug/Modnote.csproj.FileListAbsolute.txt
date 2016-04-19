@@ -22,3 +22,5 @@ C:\Users\andy-\Documents\GitHub\Programming-assignment-2\Modnote\obj\Debug\Modno
 C:\Users\andy-\Documents\GitHub\Programming-assignment-2\Modnote\obj\Debug\Modnote.Credits.resources
 C:\Users\andy-\Documents\GitHub\Programming-assignment-2\Modnote\obj\Debug\Modnote.Properties.Resources.resources
 C:\Users\andy-\Documents\GitHub\Programming-assignment-2\Modnote\obj\Debug\Modnote.csproj.GenerateResource.Cache
+C:\Users\andy-\Documents\GitHub\Programming-assignment-2\Modnote\obj\Debug\Modnote.Modcreator.resources
+C:\Users\andy-\Documents\GitHub\Programming-assignment-2\Modnote\obj\Debug\Modnote.LoadNote.resources

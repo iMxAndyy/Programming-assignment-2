@@ -1,3 +1,4 @@
+CODE
 CMP1124M
 TITLE
 Algorithms and Complexity

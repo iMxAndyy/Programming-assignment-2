@@ -1,3 +1,4 @@
+CODE
 CGP1005M
 TITLE
 Game Design 1

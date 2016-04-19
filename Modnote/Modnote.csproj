@@ -52,6 +52,18 @@
     <Compile Include="Create.Designer.cs">
       <DependentUpon>Create.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoadNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadNote.Designer.cs">
+      <DependentUpon>LoadNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modcreator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modcreator.Designer.cs">
+      <DependentUpon>Modcreator.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modnote.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +86,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Create.resx">
       <DependentUpon>Create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadNote.resx">
+      <DependentUpon>LoadNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modcreator.resx">
+      <DependentUpon>Modcreator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modnote.resx">
       <DependentUpon>Modnote.cs</DependentUpon>

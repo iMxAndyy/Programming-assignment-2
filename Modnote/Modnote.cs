@@ -16,48 +16,37 @@ namespace Modnote
         public Modnote()
         {
             InitializeComponent();
+            string[] array1 = Directory.GetFiles("../../Resources"),
+                     array2 = new string[array1.Length];
+
+            for (int i = 0; i < array1.Length; i++)
+            {
+                array2[i] = Path.GetFileNameWithoutExtension(array1[i]);
+            }
+            for (int i = 0; i < array2.Length; i++)
+            {
+                modList.Items.Add(array2[i]);
+            }
+
         }
         private void modList_SelectedIndexChanged(object sender, EventArgs e)
         {
             string click = modList.GetItemText(modList.SelectedItem),
-                   output = "null";
-
-            if (click == "CGP1005M")
+                   location = "../../Resources/";
+            location += click;
+            location += ".txt";
+            if (File.Exists(location))
             {
-                output = Properties.Resources.CGP1005M;
+                modOutput.Text = File.ReadAllText(location);
             }
-            else if (click == "CMP1005M")
-            {
-                output = Properties.Resources.CMP1005M;
-            }
-            else if (click == "CMP1123M")
-            {
-                output = Properties.Resources.CMP1123M;
-            }
-            else if (click == "CMP1124M")
-            {
-                output = Properties.Resources.CMP1124M;
-            }
-            else if (click == "CMP1125M")
-            {
-                output = Properties.Resources.CMP1125M;
-            }
-            else if (click == "CMP1127M")
-            {
-                output = Properties.Resources.CMP1127M;
-            }
-            else if (click == "CMP1129M")
-            {
-                output = Properties.Resources.CMP1129M;
-            }
-            modOutput.Text = output;
+            
         }
         private void modList_Click(object sender, EventArgs e)
         {
             string selected = modList.GetItemText(modList.SelectedItem);
             string title = "No Note Loaded";
-            NoteViewer noteListForm = new NoteViewer(title, selected);
-            noteListForm.ShowDialog();
+            NoteViewer notesForm = new NoteViewer(title, selected);
+            notesForm.ShowDialog();
             this.DialogResult = DialogResult.Cancel;
         }
 
@@ -75,12 +64,46 @@ namespace Modnote
 
         private void addModButton_Click(object sender, EventArgs e)
         {
+            Modcreator newmodForm = new Modcreator();
+            newmodForm.ShowDialog();
 
+            modList.Items.Clear();
+            string[] array1 = Directory.GetFiles("../../Resources"),
+                         array2 = new string[array1.Length];
+
+            for (int i = 0; i < array1.Length; i++)
+            {
+                array2[i] = Path.GetFileNameWithoutExtension(array1[i]);
+            }
+            for (int i = 0; i < array2.Length; i++)
+            {
+                modList.Items.Add(array2[i]);
+            }
         }
 
         private void delModButton_Click(object sender, EventArgs e)
         {
+            string click = modList.GetItemText(modList.SelectedItem),
+                   location = "../../Resources/";
+            location += click;
+            location += ".txt";
+            if (modList.SelectedIndex >= 0 )
+            {
+                modList.Items.Clear();
+                File.Delete(location);
 
+                string[] array1 = Directory.GetFiles("../../Resources"),
+                         array2 = new string[array1.Length];
+
+                for (int i = 0; i < array1.Length; i++)
+                {
+                    array2[i] = Path.GetFileNameWithoutExtension(array1[i]);
+                }
+                for (int i = 0; i < array2.Length; i++)
+                {
+                    modList.Items.Add(array2[i]);
+                }
+            }         
         }
     }
 }

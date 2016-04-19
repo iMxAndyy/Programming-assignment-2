@@ -1,3 +1,4 @@
+CODE
 CMP1127M
 TITLE
 Programming and Data Structures

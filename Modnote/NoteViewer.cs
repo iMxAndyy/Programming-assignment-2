@@ -19,10 +19,19 @@ namespace Modnote
             InitializeComponent();
             modID.Text = selected;
             nameLabel.Text = title;
+            string content = "../../../Notes/";
+                content += modID.Text;
+                content += "/";
+                content += nameLabel.Text;
+                content += ".txt";
 
             if (nameLabel.Text == "No Note Loaded")
             {
 
+            }
+            else if(File.Exists(content))
+            {
+                InsertNoteBox.Text = File.ReadAllText(content);
             }
             else
             {
@@ -45,19 +54,23 @@ namespace Modnote
             }
             else
             {
-                SaveFileDialog file = new SaveFileDialog();
-                file.FileName = nameLabel.Text;
-                file.Title = "Save Note";
-                file.Filter = "TXT files|*.txt";
-                file.InitialDirectory = "/notes";
+                string[] content = InsertNoteBox.Lines;
+                string filename = "../../../notes/";
+                filename += modID.Text;
+                Directory.CreateDirectory(filename);
+                filename += "/";
+                filename += nameLabel.Text;
+                filename += ".txt";
 
-                if (file.ShowDialog() == DialogResult.OK)
+                StreamWriter File = new StreamWriter(filename);
+                for (int i = 0; i < content.Length; i++)
                 {
-                    string name = file.FileName;
-                    string content = InsertNoteBox.Text;
-
-                    File.WriteAllText(name, content);
+                    File.WriteLine(content[i]);
                 }
+                File.Close();
+
+                this.DialogResult = DialogResult.OK;
+                this.Close();
             }
         }
 
@@ -78,20 +91,29 @@ namespace Modnote
 
         private void LoadNoteButton_Click(object sender, EventArgs e)
         {
-            OpenFileDialog file = new OpenFileDialog();
-            file.Title = "Open";
-            file.Filter = "TXT files|*.txt";
-            file.InitialDirectory = "/notes";
+            string selected2 = modID.Text;
+            LoadNote loadnoteForm = new LoadNote(selected2);
+            loadnoteForm.Show();
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
+            //string location = "../../../notes/";
+            //location += modID.Text;
+            //Directory.CreateDirectory(location);
 
-            if (file.ShowDialog() == DialogResult.OK)
-            {
-                StreamReader inputFile = new StreamReader(file.FileName);
-                InsertNoteBox.Text = inputFile.ReadToEnd();
-                inputFile.Close();
-                string filename = Path.GetFileNameWithoutExtension(file.FileName);
-                nameLabel.Text = filename;
-            }
-            
+            //OpenFileDialog file = new OpenFileDialog();
+            //file.Title = "Open";
+            //file.Filter = "TXT files|*.txt";
+            //file.InitialDirectory = "../../../notes/";
+
+            //if (file.ShowDialog() == DialogResult.OK)
+            //{
+            //    StreamReader inputFile = new StreamReader(file.FileName);
+            //    InsertNoteBox.Text = inputFile.ReadToEnd();
+            //    inputFile.Close();
+            //    string filename = Path.GetFileNameWithoutExtension(file.FileName);
+            //    nameLabel.Text = filename;
+            //}
+
         }
     }
 }

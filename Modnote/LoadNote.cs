@@ -29,8 +29,9 @@ namespace Modnote
             }
             if (array2.Length == 0)
             {
-                notesList.Items.Add("No Notes Exist for this module");
-                notesList.Items.Add("Click 'Cancel' to go back");
+                notesList.Visible = false;
+                noNotesLabel.Visible = true;
+                noNotesLabel2.Visible = true;
             }
             else
             {

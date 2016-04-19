@@ -31,6 +31,8 @@
             this.notesList = new System.Windows.Forms.ListBox();
             this.cancelButton = new System.Windows.Forms.Button();
             this.ModID = new System.Windows.Forms.Label();
+            this.noNotesLabel = new System.Windows.Forms.Label();
+            this.noNotesLabel2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // notesList
@@ -61,11 +63,33 @@
             this.ModID.TabIndex = 2;
             this.ModID.Text = "Will change";
             // 
+            // noNotesLabel
+            // 
+            this.noNotesLabel.AutoSize = true;
+            this.noNotesLabel.Location = new System.Drawing.Point(28, 60);
+            this.noNotesLabel.Name = "noNotesLabel";
+            this.noNotesLabel.Size = new System.Drawing.Size(145, 13);
+            this.noNotesLabel.TabIndex = 3;
+            this.noNotesLabel.Text = "No notes exist for this module";
+            this.noNotesLabel.Visible = false;
+            // 
+            // noNotesLabel2
+            // 
+            this.noNotesLabel2.AutoSize = true;
+            this.noNotesLabel2.Location = new System.Drawing.Point(37, 99);
+            this.noNotesLabel2.Name = "noNotesLabel2";
+            this.noNotesLabel2.Size = new System.Drawing.Size(130, 13);
+            this.noNotesLabel2.TabIndex = 4;
+            this.noNotesLabel2.Text = "Click \"Cancel\" to go back";
+            this.noNotesLabel2.Visible = false;
+            // 
             // LoadNote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(200, 215);
+            this.Controls.Add(this.noNotesLabel2);
+            this.Controls.Add(this.noNotesLabel);
             this.Controls.Add(this.ModID);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.notesList);
@@ -82,5 +106,7 @@
         private System.Windows.Forms.ListBox notesList;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Label ModID;
+        private System.Windows.Forms.Label noNotesLabel;
+        private System.Windows.Forms.Label noNotesLabel2;
     }
 }

@@ -25,7 +25,7 @@ namespace Modnote
         private void OK_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
-            this.Close();
+            this.Close();//close this window
         }
     }
 }

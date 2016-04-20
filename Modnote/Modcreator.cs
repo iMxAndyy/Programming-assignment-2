@@ -20,25 +20,25 @@ namespace Modnote
 
         private void saveNoteButton_Click(object sender, EventArgs e)
         {
-            string filename = "../../Resources/";
+            string filename = "../../Resources/";//location of the module files
             filename += modName.Text;
             filename += ".txt";
-            string[] content = InsertContentBox.Lines;
-            StreamWriter File = new StreamWriter(filename);
+            string[] content = InsertContentBox.Lines;//saves all entered information to this array
+            StreamWriter File = new StreamWriter(filename);//saves a new file with the name and content provided by the user
             for (int i = 0; i < content.Length; i++)
             {
-                File.WriteLine(content[i]);
+                File.WriteLine(content[i]);//saves the user entered module information from the content array
             }
             File.Close();
 
             this.DialogResult = DialogResult.OK;
-            this.Close();
+            this.Close();//closes the window
         }
 
         private void cancelNoteButton_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
-            this.Close();
+            this.Close();//closes the window
         }
     }
 }
